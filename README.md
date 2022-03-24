@@ -1,3 +1,5 @@
+[![Check Links](https://github.com/iiasa/Data_Stewards/actions/workflows/links.yml/badge.svg)](https://github.com/iiasa/Data_Stewards/actions/workflows/links.yml)
+
 # Data Stewards
 
 Services for collaborating on data stewardship, in particular:
