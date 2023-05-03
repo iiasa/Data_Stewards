@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Managing code and data &mdash; IIASA  documentation</title>
+  <title>Managing Code and Data &mdash; IIASA  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introduction" href="managing-code-and-data/introduction.html" />
-    <link rel="prev" title="Welcome to IIASA’s technical guide" href="index.html" /> 
+    <link rel="prev" title="Welcome to the IIASA technical guide" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2023-3-7
+                v2023-5-3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -46,19 +46,22 @@
    
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing code and data</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing Code and Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/workflows.html">Workflows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/taming-git.html">Taming Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/specialized-data-stores.html">Specialized Data Stores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/release-management.html">Release Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/good-practices-example.html">Good practices example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-code-and-data/go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="it-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IT-infrastructure.html">IT Infrastructure</a></li>
 </ul>
 
    <p class="caption">
@@ -83,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Managing code and data</li>
+      <li class="breadcrumb-item active">Managing Code and Data</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -93,7 +96,7 @@
            <div itemprop="articleBody">
              
   <section id="managing-code-and-data">
-<h1>Managing code and data<a class="headerlink" href="#managing-code-and-data" title="Permalink to this heading"></a></h1>
+<h1>Managing Code and Data<a class="headerlink" href="#managing-code-and-data" title="Permalink to this heading"></a></h1>
 <p>These pages…</p>
 <ul class="simple">
 <li><p>explain why solid code and data management matters.</p></li>
@@ -102,7 +105,8 @@
 or your team in a manner that fits the IIASA commitments and
 infrastructure.</p></li>
 <li><p>give you a handle on Git.</p></li>
-<li><p>guide on FAIR data, reproducibility, and data stores.</p></li>
+<li><p>guide on FAIR data, reproducibility, licensing, documentation, and data stores.</p></li>
+<li><p>detail release management.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 <ul>
@@ -111,9 +115,12 @@ infrastructure.</p></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/workflows.html">Workflows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/documentation.html">Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/taming-git.html">Taming Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/specialized-data-stores.html">Specialized Data Stores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/release-management.html">Release Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/good-practices-example.html">Good practices example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managing-code-and-data/go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </div>
@@ -123,7 +130,7 @@ infrastructure.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to IIASA’s technical guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the IIASA technical guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="managing-code-and-data/introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
