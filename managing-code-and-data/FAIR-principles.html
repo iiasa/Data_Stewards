@@ -20,8 +20,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Good practices examples" href="good-practices-examples.html" />
-    <link rel="prev" title="Documentation" href="documentation.html" /> 
+    <link rel="next" title="Documentation" href="documentation.html" />
+    <link rel="prev" title="Workflows" href="workflows.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2023-10-23
+                v2023-10-27
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -51,7 +51,6 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">FAIR principles, formats, and reproducibility</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fair-principles">FAIR principles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#text-formats">Text formats</a></li>
@@ -60,6 +59,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#reproducibility">Reproducibility</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
@@ -120,10 +124,10 @@ data management workflow that accommodates several FAIR concerns:</p>
 <ul class="simple">
 <li><p>Managing metadata and data together using Git keeps both co-located and
 in-sync.</p></li>
-<li><p><span class="xref std std-ref">Publishing on Zenodo</span> makes your data (and your code!)
+<li><p><a class="reference internal" href="release-management.html#zenodo-release"><span class="std std-ref">Publishing on Zenodo</span></a> makes your data (and your code!)
 findable, provides a unique persistent identifier (<a class="reference external" href="https://www.go-fair.org/fair-principles/f3-metadata-clearly-explicitly-include-identifier-data-describe/">F3</a>),
 and registers metadata (<a class="reference external" href="https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/">F4</a>).</p></li>
-<li><p><span class="xref std std-ref">Releasing on GitHub or GitLab</span> improves
+<li><p><a class="reference internal" href="release-management.html#release-github-gitlab"><span class="std std-ref">Releasing on GitHub or GitLab</span></a> improves
 accessibility, in particular by allowing for robust automated retrieval.</p></li>
 </ul>
 <p>Moreover, using a hosted Git repository automatically complies with or supports
@@ -218,7 +222,7 @@ and thereby the files contained in it. This typically involves including a file
 detailing the license in the repository. For repositories hosted on GitHub, the
 GitHub web interface provides <a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository">an easy way to do so</a>.
 For standard license types, it can be sufficient to specify the license type as
-part of metadata and a <a class="reference internal" href="documentation.html#readme"><span class="std std-ref">README</span></a>. <span class="xref std std-ref">Zenodo metadata</span> includes a license field. The <a class="reference external" href="https://citation-file-format.github.io/">Citation File Format</a> (CFF) too has optional license
+part of metadata and a <a class="reference internal" href="documentation.html#readme"><span class="std std-ref">README</span></a>. <a class="reference internal" href="release-management.html#zenodo-metadata"><span class="std std-ref">Zenodo metadata</span></a> includes a license field. The <a class="reference external" href="https://citation-file-format.github.io/">Citation File Format</a> (CFF) too has optional license
 fields.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -239,8 +243,8 @@ some way towards making your research reproducible. In addition using a
 Git-based workflow allows you or others to go back in time and retrieve old code
 or data versions to reproduce prior results. When you expect that a particular
 version of your files will be needed to reproduce your research in the future,
-you can have <span class="xref std std-ref">Git tag that commit or use more involved release
-management</span> to enable people
+you can have <a class="reference internal" href="release-management.html#tagging"><span class="std std-ref">Git tag that commit or use more involved release
+management</span></a> to enable people
 to easily return to that point in your file tree’s history.</p>
 <p>Even when all FAIR principles have been followed, just providing the data may
 not be enough for reproducibility. Also providing the actual code that does the
@@ -282,8 +286,8 @@ the decimal point when generating the text.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="documentation.html" class="btn btn-neutral float-left" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="good-practices-examples.html" class="btn btn-neutral float-right" title="Good practices examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="workflows.html" class="btn btn-neutral float-left" title="Workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="documentation.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

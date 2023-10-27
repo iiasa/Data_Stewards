@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation" href="documentation.html" />
+    <link rel="next" title="FAIR principles, formats, and reproducibility" href="FAIR-principles.html" />
     <link rel="prev" title="The Git ecosystem" href="the-git-ecosystem.html" /> 
 </head>
 
@@ -33,7 +33,7 @@
             <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                v2023-10-23
+                v2023-10-27
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -69,8 +69,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#custom-workflow">Custom workflow</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
@@ -195,7 +199,7 @@ collaborator. The IIASA <a class="reference internal" href="../IT-infrastructure
 GitHub also supports Git LFS, but the service is not for free and quite
 expensive. You institutional Git server (if extant) may or may not support LFS.
 Check with your IT department.</p>
-<p>See also the discussion of <span class="xref std std-ref">Git’s partial clone functionality</span>.</p>
+<p>See also the discussion of <a class="reference internal" href="taming-git.html#partial-clone-functionality"><span class="std std-ref">Git’s partial clone functionality</span></a>.</p>
 </section>
 <section id="collaborate-with-colleagues-and-release-on-github-or-gitlab">
 <h2>Collaborate with colleagues and release on GitHub or GitLab<a class="headerlink" href="#collaborate-with-colleagues-and-release-on-github-or-gitlab" title="Permalink to this heading"></a></h2>
@@ -204,20 +208,20 @@ Check with your IT department.</p>
 or open-access dataset. For publishing large data, release onto a Large File
 Store enabled <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> public
 repository on the IIASA <a class="reference internal" href="../IT-infrastructure/GitLab.html#gitlab"><span class="std std-ref">GitLab instance</span></a>.</p>
-<p>In the diagram above, the user on the left is the <span class="xref std std-ref">release manager</span>. See the <span class="xref std std-ref">discussion of GitHub/GitLab release management</span> for further details.</p>
+<p>In the diagram above, the user on the left is the <a class="reference internal" href="release-management.html#release-manager"><span class="std std-ref">release manager</span></a>. See the <a class="reference internal" href="release-management.html#release-github-gitlab"><span class="std std-ref">discussion of GitHub/GitLab release management</span></a> for further details.</p>
 </section>
 <section id="release-on-github-and-zenodo">
 <h2>Release on GitHub and Zenodo<a class="headerlink" href="#release-on-github-and-zenodo" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/release_on_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_GitHub_and_Zenodo.svg" width="380" /></a>
-<p>By making use of the <span class="xref std std-ref">Zenodo GitHub integration</span> you can
+<p>By making use of the <a class="reference internal" href="release-management.html#zenodo-github"><span class="std std-ref">Zenodo GitHub integration</span></a> you can
 release on GitHub and Zenodo simultaneously and make your release findable and
 DOI citable.</p>
 </section>
 <section id="release-on-gitlab-github-and-zenodo">
 <h2>Release on GitLab, GitHub, and Zenodo<a class="headerlink" href="#release-on-gitlab-github-and-zenodo" title="Permalink to this heading"></a></h2>
 <a class="reference internal image-reference" href="../_images/release_on_GitLab_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_GitLab_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_GitLab_GitHub_and_Zenodo.svg" width="450" /></a>
-<p>By making use of the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules feature</a> and the <span class="xref std std-ref">Zenodo
-GitHub integration</span> you can release on GitHub and Zenodo while
+<p>By making use of the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules feature</a> and the <a class="reference internal" href="release-management.html#zenodo-github"><span class="std std-ref">Zenodo
+GitHub integration</span></a> you can release on GitHub and Zenodo while
 referencing via a submodule a specific release of large data in a <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> repository hosted on the
 IIASA <a class="reference internal" href="../IT-infrastructure/GitLab.html#gitlab"><span class="std std-ref">GitLab instance</span></a>. The large data effectively becomes
 part of a GitHub-Zenodo release, by reference.</p>
@@ -234,7 +238,7 @@ administration of access and extending trust.</p>
 <p>Instead, GitHub and GitLab by default allow repositories to be <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">forked</a> which means
 that users copy the repository not to their local disk but to the same GitHub or
 GitLab platform, under an account managed by them. The parent repository is also
-called the <span class="xref std std-ref">upstream repository</span>.</p>
+called the <a class="reference internal" href="taming-git.html#upstream"><span class="std std-ref">upstream repository</span></a>.</p>
 <p>After forking, users can make changes to their fork without affecting the
 official upstream repository that you manage. After making an improvement, users
 will often want to contribute it back (upstream it) so that they can later
@@ -246,7 +250,7 @@ request</a>. GitLab has a very similar
 feature called a <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/">merge request</a> which works from a
 fork when using the <a class="reference external" href="https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html">forking workflow</a>.
 Both GitLab merge requests and GitHub pull requests can also be used to
-<span class="xref std std-ref">merge a branch</span> located in the
+<a class="reference internal" href="taming-git.html#branch"><span class="std std-ref">merge a branch</span></a> located in the
 same hosted repository, instead of from a forked repository.</p>
 <p>Though Git itself has built-in features that can merge a branch in the same local
 repository, or fetch and merge a branch from a remote repository, instead using
@@ -441,7 +445,7 @@ section of the Pro Git book.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="the-git-ecosystem.html" class="btn btn-neutral float-left" title="The Git ecosystem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="documentation.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="FAIR-principles.html" class="btn btn-neutral float-right" title="FAIR principles, formats, and reproducibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
