@@ -16,5 +16,5 @@ fi
 rsync -avh ${working_copy}/${built_html}/ .
 rsync -avh ${working_copy}/${built_html}/_images/ ./_images --delete
 rsync -avh ${working_copy}/${built_html}/_static/ ./_static --delete
-rsync -avh ${working_copy}/${built_html}/IT-infrastructure ./IT-infrastructure --delete
+rsync -avh ${working_copy}/${built_html}/IT-infrastructure/ ./IT-infrastructure --delete
 rsync -avh ${working_copy}/${built_html}/managing-code-and-data/ ./managing-code-and-data --delete
