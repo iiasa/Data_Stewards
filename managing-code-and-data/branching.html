@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branching &mdash; IIASA  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAIR principles, formats, and reproducibility" href="FAIR-principles.html" />
+    <link rel="prev" title="Workflows" href="workflows.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00599D" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+   
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../managing-code-and-data.html">Managing Code and Data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
+</ul>
+
+   <p class="caption">
+     <span class="caption-text">References:</span>
+   </p>
+   <ul>
+        <li class="toctree-l1"><a href= "../genindex.html">Index</a></li>
+   </ul>
+    
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #00599D" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IIASA</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../managing-code-and-data.html">Managing Code and Data</a></li>
+      <li class="breadcrumb-item active">Branching</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="branching">
+<span id="index-0"></span><span id="id1"></span><h1>Branching<a class="headerlink" href="#branching" title="Link to this heading"></a></h1>
+<p>A Git repository can hold multiple file trees that evolve in parallel. These are
+called <strong>branches</strong>. This may sound confusing: how can trees be branches? The
+reason is that the word “branch” refers to a bifurcation in the graph of
+<a class="reference internal" href="understanding-git.html#commit"><span class="std std-ref">commits</span></a> (a commit adds a set of changes to a
+repository), not to a subdirectory of a file tree.</p>
+<a class="reference internal image-reference" href="../_images/branching_optimized.svg"><img alt="../_images/branching_optimized.svg" class="align-center" src="../_images/branching_optimized.svg" width="700" />
+</a>
+<p>Up until the bifurcation, the branch and its parent branch share the same commit
+history. After the bifurcation, they diverge with different commits made to
+each. Logically, a new branch is a copy of the parent branch, but no actual data
+needs to be copied to bifurcate the commit graph: branching is very cheap.</p>
+<p>One reason for branching is to start a parallel track of development, for
+example to implement an experimental feature in code, or to adapt a dataset for
+an exceptional use case. You can also branch in support of a release workflow,
+branching from the main/master branch on a major release, and applying only
+commits that fix bugs to that branch, resulting in one or more minor/patch
+releases. There are many reasons to branch, and many workflows that can be
+enabled by that. To learn more, see the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows">Branching Workflows section</a> of the Pro
+Git book.</p>
+<p id="index-1">Commits made to one branch can be applied to another branch in the same
+repository thereby reducing divergence, for example to consolidate a feature
+developed in a feature branch into the main/master branch. This is called
+<a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches/git-merge">merging</a>
+or, when preserving a linear history, <a class="reference external" href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase">rebasing</a>. You
+can also be selective and <a class="reference external" href="https://www.atlassian.com/git/tutorials/cherry-pick">cherry pick</a> commits. Git offers
+advanced algorithms and assistance that make it practical to converge branches.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="workflows.html" class="btn btn-neutral float-left" title="Workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="FAIR-principles.html" class="btn btn-neutral float-right" title="FAIR principles, formats, and reproducibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

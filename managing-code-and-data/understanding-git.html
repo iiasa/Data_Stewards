@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,19 +7,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Understanding Git &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,17 +51,21 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -107,7 +106,8 @@
 the Git ecosystem for managing code and data, it is important to gain a better
 understanding of Git itself. Instead of diving into Git’s many features, which
 can be confusing, let’s take a step back to gain an overview.</p>
-<a class="reference internal image-reference" href="../_images/commits_optimized.svg" id="commit"><img alt="../_images/commits_optimized.svg" class="align-center" id="commit" src="../_images/commits_optimized.svg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/commits_optimized.svg" id="commit"><img alt="../_images/commits_optimized.svg" class="align-center" id="commit" src="../_images/commits_optimized.svg" width="700" />
+</a>
 <p>In essence, Git allows you to tightly manage the evolution of trees of files.
 Each new tree version resulting from changes to a tree (a <strong>commit</strong>) is stored by
 Git in a repository in unmodifiable and retrievable form, with a unique
@@ -132,7 +132,7 @@ descriptive message.</p>
 <p>You can therefore think of a Git repository as a store that preserves the
 content, provenance, and retrievability of the entire history of a tree of files
 while giving tight control over changes. This is essential because copying and
-changing information has become so cheap and easy that files tend start to lead
+changing information has become so cheap and easy that files tend to start to lead
 a life of their own: being copied at will, modified <em>ad hoc</em>, with ownership and
 responsibility soon lost.</p>
 <p>This does not mean that Git makes it difficult to copy and change information.
@@ -191,7 +191,7 @@ for a given input.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

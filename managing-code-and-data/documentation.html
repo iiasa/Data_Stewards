@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,19 +7,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,17 +51,21 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -106,6 +105,15 @@
 <p>Reusability and reproducibility are supported by useful documentation. Metadata
 and in-code comments are limited. Human-readable documentation can provide the
 missing context and give detailed guidance.</p>
+<p>When working with LLMs/Agents on managing code and data, adding a decent measure
+of documentation can help keep the iteration loop flowing since agents can read
+documentation to figure out what the content of the file tree / repository is
+about, and how it can be modified. Conversely, agents can help elaborate and
+update documentation. The documentation thereby becomes long-term project memory
+that provides a workarond for the limited context window of LLMs, or can help
+bridge the gap when switching LLMs, or starting an LLM session from scratch. You
+can prompt agents to first read the documentation or configure them with
+particular documents to first read on starting a new session.</p>
 <p id="readme">When managing code or data with Git, at a minimum include a small README text
 file at the root of the Git repository tree with a brief synopsis and a mention
 of the license. When the repository is hosted on GitHub or GitLab, using
@@ -179,7 +187,7 @@ otherwise.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

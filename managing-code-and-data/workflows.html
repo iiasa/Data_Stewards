@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,23 +7,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workflows &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="FAIR principles, formats, and reproducibility" href="FAIR-principles.html" />
+    <link rel="next" title="Branching" href="branching.html" />
     <link rel="prev" title="The Git ecosystem" href="the-git-ecosystem.html" /> 
 </head>
 
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -74,17 +69,21 @@
 <li class="toctree-l3"><a class="reference internal" href="#custom-workflow">Custom workflow</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -140,13 +139,15 @@ applying compression.</p>
 </div>
 <section id="manage-files-locally">
 <h2>Manage files locally<a class="headerlink" href="#manage-files-locally" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/user_with_Git.svg"><img alt="../_images/user_with_Git.svg" class="align-center" src="../_images/user_with_Git.svg" style="width: 175px;" /></a>
+<a class="reference internal image-reference" href="../_images/user_with_Git.svg"><img alt="../_images/user_with_Git.svg" class="align-center" src="../_images/user_with_Git.svg" width="175" />
+</a>
 <p>To manage, version, and track modifications to a tree of files, you can use Git
 locally on your personal machine. The repository is stored on a local disk.</p>
 </section>
 <section id="manage-files-on-a-server">
 <h2>Manage files on a server<a class="headerlink" href="#manage-files-on-a-server" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/manage_files_on_server.svg"><img alt="../_images/manage_files_on_server.svg" class="align-center" src="../_images/manage_files_on_server.svg" style="width: 200px;" /></a>
+<a class="reference internal image-reference" href="../_images/manage_files_on_server.svg"><img alt="../_images/manage_files_on_server.svg" class="align-center" src="../_images/manage_files_on_server.svg" width="200" />
+</a>
 <p>You can connect your local repository to a remote repository hosted on a Git
 server so that the files you manage reside on the server as well. This enables:</p>
 <ul class="simple">
@@ -164,7 +165,8 @@ with the remote repository later.</p>
 </section>
 <section id="collaborate-with-colleagues">
 <h2>Collaborate with colleagues<a class="headerlink" href="#collaborate-with-colleagues" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/collaborate_with_colleagues.svg"><img alt="../_images/collaborate_with_colleagues.svg" class="align-center" src="../_images/collaborate_with_colleagues.svg" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/collaborate_with_colleagues.svg"><img alt="../_images/collaborate_with_colleagues.svg" class="align-center" src="../_images/collaborate_with_colleagues.svg" width="350" />
+</a>
 <p>To collaboratively manage files with colleagues, a repository on your
 institution’s Git server can be used and synchronized selectively to and from
 local Git repositories for each collaborating colleague. To manage how your
@@ -178,7 +180,8 @@ repository. Sharing only quality work makes for productive collaboration.</p>
 </section>
 <section id="collaborate-with-the-world">
 <h2>Collaborate with the world<a class="headerlink" href="#collaborate-with-the-world" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/collaborate_with_the_world.svg"><img alt="../_images/collaborate_with_the_world.svg" class="align-center" src="../_images/collaborate_with_the_world.svg" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/collaborate_with_the_world.svg"><img alt="../_images/collaborate_with_the_world.svg" class="align-center" src="../_images/collaborate_with_the_world.svg" width="400" />
+</a>
 <p>To collaborate with anyone anywhere, a repository on GitHub can be used and
 synchronized selectively to and from the local Git repositories for each
 collaborator. Anyone can create a GitHub account.</p>
@@ -189,7 +192,8 @@ similar.</p>
 </section>
 <section id="manage-large-data-locally">
 <span id="index-1"></span><h2>Manage large data locally<a class="headerlink" href="#manage-large-data-locally" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/user_with_Git_LFS.svg"><img alt="../_images/user_with_Git_LFS.svg" class="align-center" src="../_images/user_with_Git_LFS.svg" style="width: 175px;" /></a>
+<a class="reference internal image-reference" href="../_images/user_with_Git_LFS.svg"><img alt="../_images/user_with_Git_LFS.svg" class="align-center" src="../_images/user_with_Git_LFS.svg" width="175" />
+</a>
 <p>To locally manage, version, and track modifications to large data files, use the
 <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> (Large File Storage)
 extension or use <a class="reference external" href="https://dvc.org/">Data Version Control</a> (DVC) in parallel
@@ -197,7 +201,8 @@ to Git with a local cache and remote backup.</p>
 </section>
 <section id="collaborate-on-large-data">
 <h2>Collaborate on large data<a class="headerlink" href="#collaborate-on-large-data" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/collaborate_on_large_data.svg"><img alt="../_images/collaborate_on_large_data.svg" class="align-center" src="../_images/collaborate_on_large_data.svg" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/collaborate_on_large_data.svg"><img alt="../_images/collaborate_on_large_data.svg" class="align-center" src="../_images/collaborate_on_large_data.svg" width="350" />
+</a>
 <p>To collaborate on large data managed through Git, one option is to host the
 repository on a Git server that supports <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> and synchronize selectively to
 and from local Git LFS repositories for each collaborator. The IIASA
@@ -211,7 +216,8 @@ accessible to all collaborators.</p>
 </section>
 <section id="collaborate-with-colleagues-and-release-on-github-or-gitlab">
 <h2>Collaborate with colleagues and release on GitHub or GitLab<a class="headerlink" href="#collaborate-with-colleagues-and-release-on-github-or-gitlab" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/release_on_GitHub.svg"><img alt="../_images/release_on_GitHub.svg" class="align-center" src="../_images/release_on_GitHub.svg" style="width: 390px;" /></a>
+<a class="reference internal image-reference" href="../_images/release_on_GitHub.svg"><img alt="../_images/release_on_GitHub.svg" class="align-center" src="../_images/release_on_GitHub.svg" width="390" />
+</a>
 <p>A public GitHub repository can be used to <strong>release</strong> an open-source code base
 or open-access dataset. For publishing large data, release onto a Large File
 Store enabled <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> public
@@ -220,14 +226,16 @@ repository on the IIASA <a class="reference internal" href="../IT-infrastructure
 </section>
 <section id="release-on-github-and-zenodo">
 <h2>Release on GitHub and Zenodo<a class="headerlink" href="#release-on-github-and-zenodo" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/release_on_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_GitHub_and_Zenodo.svg" style="width: 380px;" /></a>
+<a class="reference internal image-reference" href="../_images/release_on_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_GitHub_and_Zenodo.svg" width="380" />
+</a>
 <p>By making use of the <a class="reference internal" href="release-management.html#zenodo-github"><span class="std std-ref">Zenodo GitHub integration</span></a> you can
 release on GitHub and Zenodo simultaneously and make your release findable and
 DOI citable.</p>
 </section>
 <section id="release-on-gitlab-github-and-zenodo">
 <h2>Release on GitLab, GitHub, and Zenodo<a class="headerlink" href="#release-on-gitlab-github-and-zenodo" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/release_on_GitLab_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_GitLab_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_GitLab_GitHub_and_Zenodo.svg" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="../_images/release_on_Gitlab_GitHub_and_Zenodo.svg"><img alt="../_images/release_on_Gitlab_GitHub_and_Zenodo.svg" class="align-center" src="../_images/release_on_Gitlab_GitHub_and_Zenodo.svg" width="450" />
+</a>
 <p>By making use of the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules feature</a> and the <a class="reference internal" href="release-management.html#zenodo-github"><span class="std std-ref">Zenodo
 GitHub integration</span></a> you can release on GitHub and Zenodo while
 referencing via a submodule a specific release of large data in a <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> repository hosted on the
@@ -236,7 +244,8 @@ part of a GitHub-Zenodo release, by reference.</p>
 </section>
 <section id="forking-and-pull-requests">
 <span id="index-3"></span><h2>Forking and Pull Requests<a class="headerlink" href="#forking-and-pull-requests" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/forking_and_pull_requests.svg"><img alt="../_images/forking_and_pull_requests.svg" class="align-center" src="../_images/forking_and_pull_requests.svg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/forking_and_pull_requests.svg"><img alt="../_images/forking_and_pull_requests.svg" class="align-center" src="../_images/forking_and_pull_requests.svg" width="700" />
+</a>
 <p>Once you have released a public repository on GitHub or GitLab, anyone can
 retrieve its content, typically by cloning the repository. When your repository
 catches the interest of many people, some will make improvements and wish to
@@ -258,7 +267,7 @@ request</a>. GitLab has a very similar
 feature called a <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/">merge request</a> which works from a
 fork when using the <a class="reference external" href="https://docs.gitlab.com/ee/user/project/repository/forking_workflow.html">forking workflow</a>.
 Both GitLab merge requests and GitHub pull requests can also be used to
-<a class="reference internal" href="taming-git.html#branch"><span class="std std-ref">merge a branch</span></a> located in the
+<a class="reference internal" href="branching.html#branching"><span class="std std-ref">merge a branch</span></a> located in the
 same hosted repository, instead of from a forked repository.</p>
 <p>Though Git itself has built-in features that can merge a branch in the same local
 repository, or fetch and merge a branch from a remote repository, instead using
@@ -280,7 +289,8 @@ the local repositories of collaborators.</p></li>
 </section>
 <section id="caching-datasets">
 <h2>Caching datasets<a class="headerlink" href="#caching-datasets" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/caching_datasets.svg"><img alt="../_images/caching_datasets.svg" class="align-center" src="../_images/caching_datasets.svg" style="width: 420px;" /></a>
+<a class="reference internal image-reference" href="../_images/caching_datasets.svg"><img alt="../_images/caching_datasets.svg" class="align-center" src="../_images/caching_datasets.svg" width="420" />
+</a>
 <p>Modeling often relies on third-party datasets. These can be downloaded from
 where they have been published, for example a web site or SFTP server. This
 takes time, is sometimes failure prone, and there is often no guarantee that the
@@ -301,7 +311,8 @@ that it has sufficient capacity.</p>
 </section>
 <section id="providing-input">
 <h2>Providing input<a class="headerlink" href="#providing-input" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/providing_input.svg"><img alt="../_images/providing_input.svg" class="align-center" src="../_images/providing_input.svg" style="width: 280px;" /></a>
+<a class="reference internal image-reference" href="../_images/providing_input.svg"><img alt="../_images/providing_input.svg" class="align-center" src="../_images/providing_input.svg" width="280" />
+</a>
 <p>Providing input to a model or data store deployed as a container on the
 IIASA Kubernetes cluster can be managed via a Git repository. By
 setting up the container with the credentials needed to pull from an
@@ -330,7 +341,7 @@ repository. For example schema definitions and initial table content.</p>
 <p>Interacting with a Git repository takes time on account of all the checks and
 balances. As long as the Git operations are fast relative to the execution
 time of your code, that is fine. But if your code has to respond quickly to
-changed inputs, providing an <span class="xref std std-ref">interface</span> or <span class="xref std std-ref">monitoring a message queue</span> may be necessary.</p>
+changed inputs, providing an <a class="reference internal" href="../containerization/interfaces.html#interfaces"><span class="std std-ref">interface</span></a> or <a class="reference internal" href="../containerization/interfaces.html#broker"><span class="std std-ref">monitoring a message queue</span></a> may be necessary.</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -343,7 +354,8 @@ can postpone the point as of which things become painful.</p>
 </section>
 <section id="returning-output">
 <h2>Returning output<a class="headerlink" href="#returning-output" title="Link to this heading"></a></h2>
-<a class="reference internal image-reference" href="../_images/returning_output.svg"><img alt="../_images/returning_output.svg" class="align-center" src="../_images/returning_output.svg" style="width: 280px;" /></a>
+<a class="reference internal image-reference" href="../_images/returning_output.svg"><img alt="../_images/returning_output.svg" class="align-center" src="../_images/returning_output.svg" width="280" />
+</a>
 <p>By setting up a container with the credentials needed to push to a Git
 repository, a model deployed as a container on the IIASA Kubernetes cluster
 can return output via Git. Similarly, a specialized data store deployed as a
@@ -368,7 +380,7 @@ a package that binds Git to your language of choice.</p></li>
 <p>Interacting with a Git repository takes time on account of all the checks and
 balances. As long as the Git operations are fast relative to the execution
 time of your code, that is fine. But if your code has to provide output
-frequently, using an <span class="xref std std-ref">interface</span> or <span class="xref std std-ref">posting to a message queue</span> may be necessary.</p>
+frequently, using an <a class="reference internal" href="../containerization/interfaces.html#interfaces"><span class="std std-ref">interface</span></a> or <a class="reference internal" href="../containerization/interfaces.html#broker"><span class="std std-ref">posting to a message queue</span></a> may be necessary.</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -446,6 +458,10 @@ more elaboration as the collaboration grows or the work nears release.</p>
 with custom distributed Git workflows. For more information, see the
 <a class="reference external" href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows">Distributed Git - Distributed Workflows</a>
 section of the Pro Git book.</p>
+<p>For scenarios demanding more granular management, Git’s branching capabilities
+provide sophisticated mechanisms for handling parallel streams of evolution,
+feature isolation, and coordinated releases. The next section delves into Git
+branching.</p>
 </section>
 </section>
 
@@ -454,13 +470,13 @@ section of the Pro Git book.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="the-git-ecosystem.html" class="btn btn-neutral float-left" title="The Git ecosystem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="FAIR-principles.html" class="btn btn-neutral float-right" title="FAIR principles, formats, and reproducibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="branching.html" class="btn btn-neutral float-right" title="Branching" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

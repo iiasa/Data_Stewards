@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,19 +7,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitLab &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -52,13 +47,19 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../managing-code-and-data.html">Managing Code and Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="GitHub.html">GitHub</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">GitLab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Zenodo.html">Zenodo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Docker_Hub.html">Docker Hub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Harbor.html">Harbor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kubernetes.html">Kubernetes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RabbitMQ.html">RabbitMQ</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -95,7 +96,8 @@
              
   <section id="gitlab">
 <span id="id1"></span><h1>GitLab<a class="headerlink" href="#gitlab" title="Link to this heading"></a></h1>
-<a class="reference external image-reference" href="https://en.wikipedia.org/wiki/GitLab"><img alt="../_images/GitLab_logo.svg" class="align-left" src="../_images/GitLab_logo.svg" style="width: 100px;" /></a>
+<a class="reference external image-reference" href="https://en.wikipedia.org/wiki/GitLab"><img alt="../_images/GitLab_logo.svg" class="align-left" src="../_images/GitLab_logo.svg" width="100" />
+</a>
 <p>For use cases where the limitations of GitHub are problematic, a self-hosted
 <a class="reference external" href="https://en.wikipedia.org/wiki/GitLab">GitLab</a> instance is available. It
 provides code hosting and development collaboration features that are very
@@ -113,7 +115,7 @@ error message requesting you to send an e-mail to still request access.</p>
 instance. When connecting from the IIASA-internal network, the default SSH
 port 22 is currently not usable for SSH. Instead, you will need to use port
 2222 when using the SSH protocol. You can do so by adding the port number to
-the the Git SSH URL as follows <code class="docutils literal notranslate"><span class="pre">ssh://git&#64;gitlab.iiasa.ac.at:2222/user/repository.git</span></code>.</p>
+the Git SSH URL as follows <code class="docutils literal notranslate"><span class="pre">ssh://git&#64;gitlab.iiasa.ac.at:2222/user/repository.git</span></code>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -169,7 +171,7 @@ learn more about the platform.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

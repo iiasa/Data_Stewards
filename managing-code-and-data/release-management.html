@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,19 +7,15 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Release Management &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,17 +51,16 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Release Management</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#tagging">Tagging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#github-gitlab-release-management">GitHub/GitLab Release Management</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#workflows">Workflows</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#github-gitlab-release-management">GitHub/GitLab Release Management</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#zenodo-release-management">Zenodo Release Management</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#zenodo-only">Zenodo only</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#releasing-new-versions">Releasing new versions</a></li>
@@ -80,7 +74,9 @@
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -177,11 +173,6 @@ local repository to a GitHub or GitLab repository, prepare the release locally
 in that branch, and push the branch out once ready and validated. Then the
 manager uses the GitHub/GitLab web interface to write the release notes and
 define the tag.</p>
-<section id="workflows">
-<h3>Workflows<a class="headerlink" href="#workflows" title="Link to this heading"></a></h3>
-<p><a class="reference external" href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">This discussion of Git branching workflows</a> gives good sight on how
-these can support GitHub/GitLab release management.</p>
-</section>
 </section>
 <section id="zenodo-release-management">
 <span id="zenodo-metadata"></span><span id="zenodo-release"></span><h2>Zenodo Release Management<a class="headerlink" href="#zenodo-release-management" title="Link to this heading"></a></h2>
@@ -311,7 +302,8 @@ called “How to cite” where you want the DOI to appear.</p>
 <li><p>When the document file you are pasting the DOI into uses Markdown formatting
 — typically indicated by a <code class="docutils literal notranslate"><span class="pre">.md</span></code> file extension — you can paste the DOI as
 a nice clickable badge like this one</p>
-<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.5501089"><img alt="../_images/zenodo.5501089.svg" src="../_images/zenodo.5501089.svg" /></a>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.5501089"><img alt="../_images/zenodo.5501089.svg" src="../_images/zenodo.5501089.svg" />
+</a>
 <p>by using a Markdown link that can easily be obtained from the DOI by
 formatting it like this:</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>[<span class="nt">![DOI</span>](<span class="na">https://zenodo.org/badge/DOI/10.5281/zenodo.5501089.svg</span>)](https://doi.org/10.5281/zenodo.5501089)
@@ -345,7 +337,8 @@ hidden directory holding the local repository data store is excluded.</p></li>
 <p class="admonition-title">Tip</p>
 <p>After publishing, when visiting the Zenodo web page of the publication record,
 on the right hand side you will see an information box like the one below.</p>
-<a class="reference internal image-reference" href="../_images/publication_box.png"><img alt="../_images/publication_box.png" class="align-center" src="../_images/publication_box.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../_images/publication_box.png"><img alt="../_images/publication_box.png" class="align-center" src="../_images/publication_box.png" width="250" />
+</a>
 <p>When clicking on the DOI badge inside the information box, Zenodo will pop up
 a web frame containing various badged and bare links to the record for
 various kinds of markup. These point to the publication record or its badge,
@@ -366,7 +359,7 @@ and can be copied and pasted.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

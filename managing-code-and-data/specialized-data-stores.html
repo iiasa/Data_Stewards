@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,24 +7,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Specialized Data Stores &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Release Management" href="release-management.html" />
-    <link rel="prev" title="Taming Git" href="taming-git.html" /> 
+    <link rel="prev" title="Large Data" href="large-data.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,10 +51,12 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Specialized Data Stores</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#do-you-really-need-one">Do you really need one?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-read-only-stores">Use read-only stores</a></li>
@@ -73,7 +70,9 @@
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -117,7 +116,7 @@ fast access and provide some kind of query interface or language for data
 retrieval and updates. When introducing such a data store to a project, you risk
 losing out on many of the benefits of unified code and data management via the
 Git ecosystem as discussed on the prior pages since there is now an additional
-place where to perform updates that bypasses Git. Moreover, such data stores
+place where to perform updates that bypass Git. Moreover, such data stores
 introduce their own complexities such as hosting, maintenance, and the need for
 an additional access control mechanism. This page suggests ways to mitigate
 these risks and complexities.</p>
@@ -151,14 +150,14 @@ when the data is large — you can bring the post-update or instantiation state 
 the data store under unified Git management. This can be useful for:</p>
 <ul class="simple">
 <li><p>Ensuring that the data store contains only well-vetted and verified data.</p></li>
-<li><p>Publishing a practical means for others to to set up their own data store.</p>
+<li><p>Publishing a practical means for others to set up their own data store.</p>
 <ul>
 <li><p>Needed because the code and data of the project won’t be usable when
 published without a means to obtain an instance of the specialized data
 store.</p></li>
 </ul>
 </li>
-<li><p>Unified management of the the initial state of a test instance of the data
+<li><p>Unified management of the initial state of a test instance of the data
 store as used for development or integration testing, together with the code.</p></li>
 </ul>
 </section>
@@ -211,14 +210,14 @@ transient management instance against which those updates are performed.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="taming-git.html" class="btn btn-neutral float-left" title="Taming Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="large-data.html" class="btn btn-neutral float-left" title="Large Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="release-management.html" class="btn btn-neutral float-right" title="Release Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

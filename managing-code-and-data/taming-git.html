@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,23 +7,19 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taming Git &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Specialized Data Stores" href="specialized-data-stores.html" />
+    <link rel="next" title="Large Data" href="large-data.html" />
     <link rel="prev" title="Understanding Git" href="understanding-git.html" /> 
 </head>
 
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,6 +51,7 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FAIR-principles.html">FAIR principles, formats, and reproducibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
@@ -75,13 +71,16 @@
 <li class="toctree-l3"><a class="reference internal" href="#graphical-interfaces">Graphical interfaces</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -180,33 +179,11 @@ frequently from the upstream repository.</p>
 </section>
 <section id="branch">
 <span id="index-3"></span><h3>Branch<a class="headerlink" href="#branch" title="Link to this heading"></a></h3>
-<p>A Git repository can hold multiple file trees that evolve in parallel. These are
-called <strong>branches</strong>. This may sound confusing: how can trees be branches? The
-reason is that the word “branch” refers to a bifurcation in the graph of
-commits, not to a subdirectory of a file tree.</p>
-<a class="reference internal image-reference" href="../_images/branching_optimized.svg"><img alt="../_images/branching_optimized.svg" class="align-center" src="../_images/branching_optimized.svg" style="width: 700px;" /></a>
-<p>Up until the bifurcation, the branch and its parent branch share the same commit
-history. After the bifurcation, they diverge with different commits made to
-each. Logically, a new branch is a copy of the parent branch, but no actual data
-needs to be copied to bifurcate the commit graph: branching is very cheap.</p>
-<p>One reason for branching is to start a parallel track of development, for
-example to implement an experimental feature in code, or to adapt a dataset for
-an exceptional use case. You can also branch in support of a release workflow,
-branching from the main/master branch on a major release, and applying only
-commits that fix bugs to that branch, resulting in one or more minor/patch
-releases. There are many reasons to branch, and many workflows that can be
-enabled by that. To learn more, see the <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows">Branching Workflows section</a> of the Pro
-Git book.</p>
-<p id="index-4">Commits made to one branch can be applied to another branch in the same
-repository thereby reducing divergence, for example to consolidate a feature
-developed in a feature branch into the main/master branch. This is called
-<a class="reference external" href="https://www.atlassian.com/git/tutorials/using-branches/git-merge">merging</a>
-or, when preserving a linear history, <a class="reference external" href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase">rebasing</a>. You
-can also be selective and <a class="reference external" href="https://www.atlassian.com/git/tutorials/cherry-pick">cherry pick</a> commits. Git offers
-advanced algorithms and assistance that make it practical to converge branches.</p>
+<p>A Git repository can hold multiple file trees that evolve in parallel, called
+<strong>branches</strong>. For more details on branching, see <a class="reference internal" href="branching.html#branching"><span class="std std-ref">Branching</span></a>.</p>
 </section>
 <section id="workspace-aka-worktree-or-working-directory">
-<span id="index-5"></span><h3>Workspace (aka Worktree or Working Directory)<a class="headerlink" href="#workspace-aka-worktree-or-working-directory" title="Link to this heading"></a></h3>
+<span id="index-4"></span><h3>Workspace (aka Worktree or Working Directory)<a class="headerlink" href="#workspace-aka-worktree-or-working-directory" title="Link to this heading"></a></h3>
 <p>A tree of files on your filesystem associated with a branch commit in a local
 repository. The files in the workspace are what you use or modify. Git will keep
 track of any modifications relative to this branch commit.</p>
@@ -218,7 +195,7 @@ a single workspace and <strong>switch</strong> it between branches.</p>
 </div>
 </section>
 <section id="index-aka-staging-area">
-<span id="index-6"></span><h3>Index (aka Staging Area)<a class="headerlink" href="#index-aka-staging-area" title="Link to this heading"></a></h3>
+<span id="index-5"></span><h3>Index (aka Staging Area)<a class="headerlink" href="#index-aka-staging-area" title="Link to this heading"></a></h3>
 <p>The index is where you shortlist (stage) changes made in a workspace before
 committing them. This allows you to collect a subset of changes that belong
 together and can thereby more easily be reviewed, described with a commit
@@ -229,7 +206,7 @@ re-associated with this new branch commit: only the remaining changes will
 thereby show when having Git display what changed in the workspace.</p>
 </section>
 <section id="stash-stack">
-<span id="index-7"></span><h3>Stash stack<a class="headerlink" href="#stash-stack" title="Link to this heading"></a></h3>
+<span id="index-6"></span><h3>Stash stack<a class="headerlink" href="#stash-stack" title="Link to this heading"></a></h3>
 <p>The stash stack is where you can have Git <strong>stash</strong> uncommitted changes for later
 work. It is associated with a local repository. You can stash changes present in
 the workspace and index (staged changes) and later retrieve them.</p>
@@ -242,7 +219,7 @@ reverse order.</p>
 </section>
 <section id="default-places">
 <h3>Default places<a class="headerlink" href="#default-places" title="Link to this heading"></a></h3>
-<p id="index-8">When starting to work with a Git repository, it typically already exists on a
+<p id="index-7">When starting to work with a Git repository, it typically already exists on a
 remote server. You obtain a local copy of the remote repository by using the
 <strong>clone</strong> command. This will result in the following set of default places:</p>
 <ul class="simple">
@@ -276,17 +253,16 @@ operating between the places discussed above and thereby allows you to explore
 the command space from the places perspective. Once you have a good candidate
 for the command name, you can explore <a class="reference external" href="https://git-scm.com/docs/user-manual">the detailed documentation</a> or quickly display build-in help or a
 manual as detailed in the next section.</p>
-<p>When in need of further guidance, you can easily find answers by searching with
-Google or <a class="reference external" href="https://stackoverflow.com">Stack Overflow</a> since the huge Git user
-base will no doubt have asked the particular question you have, and likely has
-linked or selected good answers to it.</p>
-<p id="index-9">To learn more, see the comprehensive introductory and reference <a class="reference external" href="https://git-scm.com/doc">videos,
+<p>When in need of further guidance, you can easily find answers by typing a
+question into an LLM (ChatGPT, Gemini, Grok, self-hosted, …) or by searching
+the web.</p>
+<p id="index-8">To learn more, see the comprehensive introductory and reference <a class="reference external" href="https://git-scm.com/doc">videos,
 documentation, and even a book</a> available on the Git
 website.</p>
 </section>
 <section id="built-in-help-and-manuals">
 <h2>Built-in help and manuals<a class="headerlink" href="#built-in-help-and-manuals" title="Link to this heading"></a></h2>
-<p id="index-10">When you already know which command you need, but forgot the precise syntax or
+<p id="index-9">When you already know which command you need, but forgot the precise syntax or
 options, the official Git command line client offers built-in help. By invoking</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--help
 </pre></div>
@@ -296,7 +272,7 @@ options, the official Git command line client offers built-in help. By invoking<
 </pre></div>
 </div>
 <p>you get the synopsis, description, and options of the given Git command.</p>
-<p id="index-11">On Linux/MacOS, invoking</p>
+<p id="index-10">On Linux/MacOS, invoking</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>git
 </pre></div>
 </div>
@@ -314,7 +290,7 @@ MacOS/Linux since manual pages are more readable in a web browser than in a
 shell.</p>
 </section>
 <section id="partial-clone-functionality">
-<span id="index-12"></span><h2>Partial clone functionality<a class="headerlink" href="#partial-clone-functionality" title="Link to this heading"></a></h2>
+<span id="index-11"></span><h2>Partial clone functionality<a class="headerlink" href="#partial-clone-functionality" title="Link to this heading"></a></h2>
 <p>When using Git for managing data, repositories can get large. Using the <a class="reference external" href="https://docs.gitlab.com/ee/topics/git/lfs/">Git LFS</a> (Large File Storage) extension
 or <a class="reference external" href="https://dvc.org/">Data Version Control</a> (DVC) in parallel to Git makes
 storing large files performant. But cloning a big repository can still take a
@@ -327,21 +303,19 @@ only a subset of the files, and downloads further files only as needed on
 <strong>checkout</strong>.</p>
 </section>
 <section id="graphical-interfaces">
-<span id="index-13"></span><h2>Graphical interfaces<a class="headerlink" href="#graphical-interfaces" title="Link to this heading"></a></h2>
-<p>Most integrated development environments and many code editors allow you to
+<span id="index-12"></span><h2>Graphical interfaces<a class="headerlink" href="#graphical-interfaces" title="Link to this heading"></a></h2>
+<p>There are many Git clients with a graphical user interface (GUI). The GUIs of
+most integrated development environments and many code editors allow you to
 perform Git operations via menus or buttons. For example, the image below shows
 the Git menu of Visual Studio Code.</p>
-<a class="reference internal image-reference" href="../_images/VSCode_Git_menu.png"><img alt="../_images/VSCode_Git_menu.png" class="align-center" src="../_images/VSCode_Git_menu.png" style="width: 700px;" /></a>
-<p>When you do most of your work in such an environment or editor, using the
-graphical interface is handy. Some graphical interfaces have very convenient
-support for merging and dealing with pull requests. But beware that not all Git
-functionality will be available, and that the examples that you can find online
-via a search engine are unlikely to show how to do something with the particular
-graphical interface that you are using. That is why you will still need the
-official Git client every now and then.</p>
-<p>When you use several environments and editors and do not want to learn all the
-different graphical interfaces, using the official Git client by default may be
-preferable.</p>
+<a class="reference internal image-reference" href="../_images/VSCode_Git_menu.png"><img alt="../_images/VSCode_Git_menu.png" class="align-center" src="../_images/VSCode_Git_menu.png" width="700" />
+</a>
+<p>Some Git GUIs have very convenient support for merging and dealing with pull
+requests. But beware that not all Git functionality will be available, and that
+asking an LLM or searching online is much less likely to give you an answer on
+how to use a particular GUI to do Git things as compared to asking about the
+standard command line client. That is why you will still need the official Git
+command line client every now and then.</p>
 </section>
 </section>
 
@@ -350,13 +324,13 @@ preferable.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="understanding-git.html" class="btn btn-neutral float-left" title="Understanding Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="specialized-data-stores.html" class="btn btn-neutral float-right" title="Specialized Data Stores" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="large-data.html" class="btn btn-neutral float-right" title="Large Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

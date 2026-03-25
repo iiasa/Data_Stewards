@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,24 +7,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAIR principles, formats, and reproducibility &mdash; IIASA  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=7f41d439"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f41d439"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Documentation" href="documentation.html" />
-    <link rel="prev" title="Workflows" href="workflows.html" /> 
+    <link rel="prev" title="Branching" href="branching.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,9 +35,6 @@
             
               <img src="../_static/IIASA_logo.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                v2025-05-14
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -56,6 +51,7 @@
 <li class="toctree-l2"><a class="reference internal" href="version-control.html">Version Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-git-ecosystem.html">The Git ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows.html">Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching.html">Branching</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">FAIR principles, formats, and reproducibility</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fair-principles">FAIR principles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#text-formats">Text formats</a></li>
@@ -67,13 +63,16 @@
 <li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="understanding-git.html">Understanding Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="taming-git.html">Taming Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large-data.html">Large Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="specialized-data-stores.html">Specialized Data Stores</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release-management.html">Release Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="good-practices-examples.html">Good practices examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="go-with-the-flow.html">Go with the flow</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../containerization.html">Containerization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../IT-infrastructure.html">IT Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment.html">Deployment</a></li>
 </ul>
 
    <p class="caption">
@@ -112,10 +111,11 @@
 <span id="index-0"></span><h1>FAIR principles, formats, and reproducibility<a class="headerlink" href="#fair-principles-formats-and-reproducibility" title="Link to this heading"></a></h1>
 <section id="fair-principles">
 <h2>FAIR principles<a class="headerlink" href="#fair-principles" title="Link to this heading"></a></h2>
-<figure class="align-center" id="id6">
-<a class="reference internal image-reference" href="../_images/FAIR_data_principles.jpg"><img alt="../_images/FAIR_data_principles.jpg" src="../_images/FAIR_data_principles.jpg" style="width: 100%;" /></a>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/FAIR_data_principles.jpg"><img alt="../_images/FAIR_data_principles.jpg" src="../_images/FAIR_data_principles.jpg" style="width: 100%;" />
+</a>
 <figcaption>
-<p><span class="caption-text">© Sangya Pundir</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-text">© Sangya Pundir</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>IIASA has committed to adopt the <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR principles</a> for
@@ -165,7 +165,7 @@ where necessary</a></p></li>
 also machine-readable such as <a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/JSON">JSON</a>, or <a class="reference external" href="https://en.wikipedia.org/wiki/YAML">YAML</a> when storing relatively small data for
 which the inefficiency of text-based formats matters little.<a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Ensure that
 the text flows across multiple lines<a class="footnote-reference brackets" href="#f2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> for readability and to enable Git
-to asses, merge, and display line-based differences when making changes. This
+to assess, merge, and display line-based differences when making changes. This
 makes such data very easy to manage.</p>
 <div class="admonition note" id="index-2">
 <p class="admonition-title">Note</p>
@@ -215,7 +215,7 @@ releasing to the public, it is a good idea to already specify the rights for
 reuse through a license so that collaborators and project partners who have
 access know their rights.</p>
 <p>Research outputs and other original work produced for IIASA should default
-to a a public domain license (e.g. <a class="reference external" href="https://en.wikipedia.org/wiki/CC0">CC0</a>)
+to a public domain license (e.g. <a class="reference external" href="https://en.wikipedia.org/wiki/CC0">CC0</a>)
 or a permissive license such as <a class="reference external" href="https://en.wikipedia.org/wiki/CC-BY">CC-BY</a>
 for data or the <a class="reference external" href="https://en.wikipedia.org/wiki/MIT_License">MIT license</a> for
 code. Derivative works of <a class="reference external" href="https://en.wikipedia.org/wiki/Copyleft">copyleft</a>
@@ -270,7 +270,7 @@ repository containing the code used to perform the processing.</p></li>
 <aside class="footnote brackets" id="f1" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Compared to binary data, text-based numerical data takes up about a
-factor of three more space at full precision,<a class="footnote-reference brackets" href="#f3" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and parsing it may
+factor of three more space at full precision,<a class="footnote-reference brackets" href="#f3" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and parsing it may
 require a significant amount of time.</p>
 </aside>
 <aside class="footnote brackets" id="f2" role="doc-footnote">
@@ -280,7 +280,7 @@ single long line. A “pretty print” option that flows the text across
 multiple lines is available in libraries that write these formats.</p>
 </aside>
 <aside class="footnote brackets" id="f3" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">3</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
 <p>Floating point numbers require special care when represented as text.
 The full binary precision will only be encoded in the text if you allow for
 sufficient digits of precision instead of truncating with few digits after
@@ -294,14 +294,14 @@ the decimal point when generating the text.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="workflows.html" class="btn btn-neutral float-left" title="Workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="branching.html" class="btn btn-neutral float-left" title="Branching" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="documentation.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Albert Brouwer, IIASA.</p>
+    <p>&#169; Copyright 2026, Albert Brouwer, IIASA.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
